@@ -20,6 +20,15 @@ public class CalculatorTest{
 
   @Test
   public void addTest2() {
+    int a = 32;
+    int b = 55;
+    int correctOutput = 87;
+    long res = calculator.add(a, b);
+    Assert.assertEquals(correctOutput, res);
+  }
+
+  @Test
+  public void addTest3() {
     int a = 77;
     int b = 55;
     int correctOutput = 132;
