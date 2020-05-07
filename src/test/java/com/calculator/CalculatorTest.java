@@ -35,4 +35,31 @@ public class CalculatorTest{
     long res = calculator.add(a, b);
     Assert.assertEquals(correctOutput, res);
   }
+
+  @Test
+  public void subTest1() {
+    int a = 30;
+    int b = 20;
+    int correctOutput = 10;
+    long res = calculator.subtract(a, b);
+    Assert.assertEquals(correctOutput, res);
+  }
+
+  @Test
+  public void addTest2() {
+    int a = 32;
+    int b = 55;
+    int correctOutput = -23;
+    long res = calculator.subtract(a, b);
+    Assert.assertEquals(correctOutput, res);
+  }
+
+  @Test
+  public void addTest3() {
+    int a = 77;
+    int b = 55;
+    int correctOutput = 22;
+    long res = calculator.subtract(a, b);
+    Assert.assertEquals(correctOutput, res);
+  }
 }
