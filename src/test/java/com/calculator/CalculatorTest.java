@@ -28,15 +28,6 @@ public class CalculatorTest{
   }
 
   @Test
-  public void addTest3() {
-    int a = 77;
-    int b = 55;
-    int correctOutput = 132;
-    long res = calculator.add(a, b);
-    Assert.assertEquals(correctOutput, res);
-  }
-
-  @Test
   public void subTest1() {
     int a = 30;
     int b = 20;
@@ -50,15 +41,6 @@ public class CalculatorTest{
     int a = 32;
     int b = 55;
     int correctOutput = -23;
-    long res = calculator.subtract(a, b);
-    Assert.assertEquals(correctOutput, res);
-  }
-
-  @Test
-  public void subTest3() {
-    int a = 77;
-    int b = 55;
-    int correctOutput = 22;
     long res = calculator.subtract(a, b);
     Assert.assertEquals(correctOutput, res);
   }
@@ -78,6 +60,24 @@ public class CalculatorTest{
     int b = 10;
     int correctOutput = 50;
     long res = calculator.multiplication(a, b);
+    Assert.assertEquals(correctOutput, res);
+  }
+
+  @Test
+  public void divTest1() {
+    int a = 30;
+    int b = 20;
+    int correctOutput = 1.5;
+    long res = calculator.division(a, b);
+    Assert.assertEquals(correctOutput, res);
+  }
+
+  @Test
+  public void divTest2() {
+    int a = 5;
+    int b = 10;
+    int correctOutput = 0.5;
+    long res = calculator.division(a, b);
     Assert.assertEquals(correctOutput, res);
   }
 }
