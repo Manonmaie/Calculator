@@ -62,4 +62,22 @@ public class CalculatorTest{
     long res = calculator.subtract(a, b);
     Assert.assertEquals(correctOutput, res);
   }
+
+  @Test
+  public void mulTest1() {
+    int a = 30;
+    int b = 20;
+    int correctOutput = 600;
+    long res = calculator.multiplication(a, b);
+    Assert.assertEquals(correctOutput, res);
+  }
+
+  @Test
+  public void mulTest2() {
+    int a = 5;
+    int b = 10;
+    int correctOutput = 50;
+    long res = calculator.multiplication(a, b);
+    Assert.assertEquals(correctOutput, res);
+  }
 }
