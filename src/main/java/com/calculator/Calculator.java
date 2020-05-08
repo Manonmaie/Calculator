@@ -6,7 +6,6 @@ class Calculator {
         System.out.println("Difference of 3 and 4:"+ subtract(3,4));
         System.out.println("Product of 3 and 4:"+ multiplication(3,4));
         System.out.println("Division of 3 and 4:"+ divide(3,4));
-        System.out.println("Division of 4 and 3:"+ divide(4,3));
     }
     public static int add(int a, int b) {
     	return a+b;
