@@ -15,9 +15,13 @@ class Calculator {
     public static int multiplication(int a, int b) {
     	return a*b;
     }
-    public static int division(int a, int b) {
-      if(b==0)
-        return a;
-    	return a/b;
-    }
+    public static double divide(int a, int b) {
+  		double result;
+  		if (b == 0) {
+  			throw new IllegalArgumentException("Divisor cannot divide by zero");
+  		} else {
+  			result = Double.valueOf(a)/Double.valueOf(b);
+  		}
+  		return result;
+  	}
 }

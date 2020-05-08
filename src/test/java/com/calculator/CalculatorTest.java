@@ -64,20 +64,26 @@ public class CalculatorTest{
   }
 
   @Test
-  public void divTest1() {
-    int a = 30;
-    int b = 20;
-    int correctOutput = 1.5;
-    long res = calculator.division(a, b);
-    Assert.assertEquals(correctOutput, res);
-  }
+   public void divTest1() {
+       int a = 30;
+       int b = 20;
+       double expectedResult = 1.5;
+       double result = calculator.divide(a, b);
+       Assert.assertEquals(expectedResult, result,0.00005);
+   }
+   @Test
+    public void divTest2() {
+        int a = 5;
+        int b = 10;
+        double expectedResult = 0.5;
+        double result = calculator.divide(a, b);
+        Assert.assertEquals(expectedResult, result,0.00005);
+    }
 
-  @Test
-  public void divTest2() {
-    int a = 5;
-    int b = 10;
-    int correctOutput = 0.5;
-    long res = calculator.division(a, b);
-    Assert.assertEquals(correctOutput, res);
-  }
+   @Test(expected = IllegalArgumentException.class)
+   public void divTest3() {
+       int a = 15;
+       int b = 0;
+       calculator.divide(a, b);
+   }
 }
